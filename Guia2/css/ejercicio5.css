@@ -1,0 +1,80 @@
+html {
+  font-size: 20px; /* base: 1rem = 20px */
+}
+
+body {
+  color: #fcfcfc;
+  background-color: #355664; /* corregido con # */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* tamaños de encabezados en rem */
+h1 { font-size: 2rem; }   /* 40px */
+h2 { font-size: 1.2rem; } /* 24px */
+h3 { font-size: 1rem; }   /* 20px */
+
+footer {
+  background-color: black;
+  color: white;
+  font-size: 0.7rem;
+  margin-top: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+div.wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+section article {
+  background-color: rgba(33,62,74,1);
+  margin-top: 20px;
+  padding: 12px;
+}
+
+section article p {
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+nav span a {
+  background-color: white;
+  border-right: 1px solid;
+  color: black;
+  font-size: 0.6rem;
+  float: left;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav span a:hover {
+  background-color: #b2dfdb;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+}
+
+/*Enlace externo "Elenco" con fondo gris*/
+nav a[href^="http"] {
+  background-color: #9E9E9E;
+  color: #000;
+}
+nav a[href^="http"]:hover {
+  background-color: #9E9E9E;
+}
+
+/*Primera letra de cada párrafo en los artículos*/
+section article p::first-letter {
+  color: gold;
+  font-size: 1.5rem; /* 30px */
+  font-weight: 700;
+}
+
+/*Primera línea de cada párrafo del primer artículo subrayada*/
+section article:first-child p::first-line {
+  text-decoration: underline;
+}

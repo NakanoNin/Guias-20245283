@@ -1,0 +1,158 @@
+:root{
+  --bg:#0f172a;         /* fondo página */
+  --panel:#1f2937;      /* accordion */
+  --panel-2:#111827;    
+  --text:#e5e7eb;       /* texto principal */
+  --muted:#9ca3af;
+  --brand:#22d3ee;      
+  --card:#111827;
+  --card-border:#334155;
+  --btn:#06b6d4;
+  --btn-text:#012a32;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+  background:linear-gradient(180deg,var(--bg),#0b1220);
+  color:var(--text);
+}
+
+/* Encabezado principal */
+.site-header{
+  padding:32px 20px 8px;
+  text-align:center;
+}
+.site-header h1{
+  margin:0;
+  font-weight:800;
+  letter-spacing:.5px;
+  font-size: clamp(22px, 2.4vw + 8px, 34px);
+}
+.lead{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+/* Contenedor */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:16px;
+}
+
+/* Acordeon de guias */
+.guide{
+  background:var(--panel);
+  border:1px solid #263244;
+  border-radius:14px;
+  margin:14px 0;
+  overflow:hidden;
+}
+
+/* titulo de la guía */
+.guide > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:16px 18px;
+  background:var(--panel-2);
+  color:var(--text);
+  font-weight:700;
+  letter-spacing:.3px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border-bottom:1px solid #263244;
+  position:relative;
+}
+.guide > summary::-webkit-details-marker{ display:none; }
+
+/* Caret animado */
+.caret{
+  width:10px;
+  height:10px;
+  border-right:2px solid var(--brand);
+  border-bottom:2px solid var(--brand);
+  transform:rotate(-45deg);
+  transition:transform .25s ease;
+  margin-right:2px;
+}
+.guide[open] > summary .caret{
+  transform:rotate(45deg);
+}
+
+/* Grid de tarjetas */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+  gap:16px;
+  padding:18px;
+}
+
+/* Tarjeta */
+.card{
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-radius:14px;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition:transform .15s ease, border-color .15s ease;
+}
+.card:hover{
+  transform:translateY(-2px);
+  border-color:#475569;
+}
+
+.tag{
+  display:inline-block;
+  font-size:.75rem;
+  color:#94a3b8;
+  background:#0b1627;
+  border:1px solid #243244;
+  padding:4px 10px;
+  border-radius:999px;
+  width:max-content;
+}
+
+.card h2{
+  font-size:1.05rem;
+  line-height:1.2;
+  margin:0 0 6px;
+}
+
+/* Botón */
+.btn{
+  margin-top:auto;
+  display:inline-block;
+  text-decoration:none;
+  background:var(--btn);
+  color:var(--btn-text);
+  font-weight:700;
+  padding:10px 12px;
+  border-radius:10px;
+  text-align:center;
+  transition:filter .15s ease, transform .1s ease;
+}
+.btn:hover{ filter:brightness(1.05); }
+.btn:active{ transform:scale(.98); }
+
+/* Footer */
+.footer{
+  text-align:center;
+  color:var(--muted);
+  padding:26px 12px 40px;
+  font-size:.9rem;
+  border-top:1px solid #182133;
+  margin-top:18px;
+}
+
+/* Responsivo */
+@media (max-width:560px){
+  .guide > summary{ padding:14px 16px; }
+  .grid{ padding:14px; gap:14px; }
+}

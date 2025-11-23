@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biografía</title>
+  <link rel="stylesheet" href="css/ejercicio7.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="site">
+    <div class="container">
+      <h1 class="brand">Fernando Abimalec López Valenzuela</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#gustos">Gustos</a></li>
+          <li><a href="#cronologia">Cronología</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#inspiraciones">Inspiraciones</a></li>
+          <!-- ejemplo de vínculo externo para activar selector de atributo -->
+          <li><a href="https://es.wikipedia.org/wiki/Tron:_Legacy" target="_blank" rel="noopener">Tron: Legacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio" class="container">
+    <section class="hero card">
+      <!-- sin foto personal por preferencia; avatar simbólico -->
+      <div class="avatar" aria-hidden="true">F</div>
+      <div class="hero-text">
+        <h2>Estudiante de Desarrollo Web (20)</h2>
+        <p class="lead">Nací el <strong>25/01/2005</strong> en <strong>San Salvador</strong>. Vivo en <strong>El Salvador, San Salvador</strong>.</p>
+        <p>Me gusta crear cosas desde cero con HTML, CSS y JavaScript; ver una página vacía y
+           transformarla en algo funcional y bonito.</p>
+        <a class="btn" href="#sobre-mi">Conocer más</a>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="card article">
+      <h2 class="section-title">Sobre mí</h2>
+      <p>Al inicio quería estudiar Medicina (Cardiología), pero a los 14–15 años empecé con HTML,
+         CSS y JavaScript en Visual Studio Code. Programar y ver cómo algo aparece de la nada me
+         fascinó; desde entonces elegí el desarrollo.</p>
+      <p>Entreno <strong>MMA</strong> y <strong>Jiu-Jitsu brasileño</strong>; también he practicado básquetbol,
+         natación y voleibol. Disfruto el arte (Dalí, <em>La noche estrellada</em> de Van Gogh), la música
+         (Post Malone, electrónica/techno, Anyma) y el cine/series/anime.</p>
+
+      <ul class="datos">
+        <li><b>Ciudad:</b> San Salvador</li>
+        <li><b>Frases que me gustan:</b> “Sic Parvis Magna” (grandeza desde lo pequeño) y el mensaje
+          de Rengoku a Tanjiro sobre vivir con orgullo.</li>
+        <li><b>Metas (corto plazo):</b> graduarme de la universidad.</li>
+        <li><b>Metas (largo plazo):</b> especializarme en <strong>ciberseguridad</strong>, hacer una maestría y
+          construir una <strong>startup</strong>.</li>
+      </ul>
+    </section>
+
+    <section id="gustos" class="card">
+      <h2 class="section-title">Gustos y curiosidades</h2>
+      <div class="grid-2">
+        <article class="mini">
+          <h3>Favoritos</h3>
+          <ul class="bullets">
+            <li><b>Comida:</b> hamburguesas</li>
+            <li><b>Música:</b> Post Malone y Anyma</li>
+            <li><b>anime:</b> Black Clover</li>
+            <li><b>Películas:</b> trilogía <em>Cómo entrenar a tu dragón</em>, Tron</li>
+          </ul>
+        </article>
+        <article class="mini">
+          <h3>Quiero visitar</h3>
+          <ul class="bullets">
+            <li>Japón</li>
+            <li>España</li>
+            <li>Alemania</li>
+          </ul>
+        </article>
+      </div>
+      <p class="nota">Después de un día largo me relaja dormir, entrenar o ver películas.</p>
+    </section>
+
+    <section id="cronologia" class="card">
+      <h2 class="section-title">Cronología</h2>
+      <ol class="timeline">
+        <li>
+          <h4>Infancia — Primer contacto</h4>
+          <p>Scratch en 4.º grado: me divertía aunque no entendía bien qué era programar.</p>
+        </li>
+        <li>
+          <h4>Adolescencia — Exploración</h4>
+          <p>Foros de videojuegos y curiosidad por Python y C++.</p>
+        </li>
+        <li>
+          <h4>2020+ — Web</h4>
+          <p>Visual Studio Code; proyectos de páginas web personales/academia.</p>
+        </li>
+        <li>
+          <h4>Actualidad — Ciberseguridad</h4>
+          <p>Certificado junior (Cisco) en camino; objetivo: experiencia y futura startup.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="habilidades" class="card">
+      <h2 class="section-title">Habilidades</h2>
+      <ul class="tags">
+        <li class="tag html">HTML</li>
+        <li class="tag css">CSS</li>
+        <li class="tag js">JavaScript</li>
+        <li class="tag py">Python</li>
+        <li class="tag java">Java (básico)</li>
+        <li class="tag soft">Escucha abierta · Creatividad</li>
+      </ul>
+    </section>
+
+    <section id="inspiraciones" class="card">
+      <h2 class="section-title">Inspiraciones</h2>
+      <p>Historias que me inspiran: <a href="https://es.wikipedia.org/wiki/Tron:_Legacy" target="_blank" rel="noopener">Tron: Legacy</a>.</p>
+      <p>La idea de crear mundos (como Flynn en Tron) me recuerda que el software permite materializar
+         ideas desde lo pequeño hasta lo grande.</p>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="container">
+      <p >&copy; 2025 · Biografía.</p>
+    </div>
+  </footer>
+</body>
+</html>

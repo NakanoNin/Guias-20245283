@@ -1,0 +1,79 @@
+/* parte superior mas angosta */
+#encabezado{
+    margin: 0px auto;
+    width: 90%;
+}
+
+/* imagen arriba */
+#imgDesc img{
+    width: 100%;
+    height: auto;
+    float: none;
+}
+
+#descripcion{
+    width: 100%;
+}
+
+#descripcion p{
+    margin: 20px 0px 10px 0px;
+    color: white;
+    line-height: 140%;
+    text-align: justify;
+    font-size: 1em;
+}
+
+/* contenido mas ancho */
+#contenido{
+    width: 90%;
+    margin: 0px auto;
+    overflow: auto;
+}
+
+/* index ahora 2 columnas */
+.plan{
+    width: 94%;
+    padding: 1.5%;
+    margin: 20px 1.5%;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px black;
+    float: left;
+    text-align: justify;
+}
+
+/* imagen mitad */
+.plan img{
+    width: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+/* boton */
+.boton{
+    width: 40%;
+    float: right;
+}
+
+/* galeria (2 columnas) */
+#galeria .plan{
+    font-size: 0.8em;
+    padding-bottom: 10px;
+    margin: 10px 1%;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    width: 44%;
+    text-align: center;
+    font-style: italic;
+}
+
+#galeria .plan p{
+    clear: both;
+}
+
+#galeria .plan img{
+    width: 90%;
+    height: auto;
+    margin: 5px 5%;
+}

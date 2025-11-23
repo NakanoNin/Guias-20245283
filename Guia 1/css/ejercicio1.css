@@ -1,0 +1,35 @@
+/* Fondo celeste */
+body {
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor general */
+.contenedor {
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* Encabezado */
+h2 {
+  text-decoration: underline;
+  color: white;
+}
+
+/* Primer párrafo: color navy y negrita */
+.parrafo1 {
+  color: navy;
+  font-weight: bold;
+}
+
+/* Segundo párrafo: mayúsculas y justificado */
+.parrafo2 {
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+/* Tercer párrafo: tamaño de letra reducido */
+.parrafo3 {
+  font-size: 12px;
+}

@@ -1,0 +1,57 @@
+/* Reset mínimo */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body{
+  background-color: steelblue;
+  color: #EEE;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Contenedor del tablero 8x8 */
+#tablero{
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.2);
+}
+
+/* Cada celda del tablero es un <p> */
+#tablero p{
+  float: left;              /* apilar 8 por fila */
+  width: 50px;
+  height: 50px;
+  font-size: 36px;
+  background-color: black;  /* por defecto, casilla negra */
+  color: white;             /* piezas blancas sobre negro */
+  text-align: center;
+  line-height: 50px;        /* centra el símbolo verticalmente */
+  margin: 0;
+}
+
+/* Limpiar el float al final de cada fila */
+.filaImpar::after,
+.filaPar::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Alternancia con :nth-child() para formar el damero
+   - Filas impares: las celdas impares son BLANCAS
+   - Filas pares:   las celdas pares   son BLANCAS */
+#tablero .filaImpar p:nth-child(odd){
+  background-color: white;
+  color: black;             /* piezas negras sobre blanco */
+}
+
+#tablero .filaPar p:nth-child(even){
+  background-color: white;
+  color: black;
+}
+
+/* Título */
+h1{ margin: 16px 0 8px; }

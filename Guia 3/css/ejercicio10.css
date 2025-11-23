@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+html{ font-family:'Didact Gothic', sans-serif; }
+body{ background:#BBB; color:#444; }
+h1{ font-size:1.3em; text-align:center; color:#464d52; }
+
+/* Parte superior */
+#superior{ width:100%; padding:30px 0; background:#464d52; }
+#encabezado{ width:960px; max-width:100%; margin:0 auto; color:#fff; }
+#logo{ display:block; margin:0 0 8px 0; }
+
+#imgDesc{ overflow:hidden; }
+#descripcion{
+  width:360px; max-width:100%;
+  background:#888; color:#fff;
+  float:left; padding:20px; line-height:1.8; text-align:justify;
+}
+#imgDesc .principal{
+  width:600px; max-width:100%; object-fit:cover;
+  float:right; display:block; height:auto;
+}
+
+/* Menú */
+nav{ font-size:1.2em; margin:0 auto; }
+nav ul{ list-style:none; margin:0; display:flex; flex-wrap:wrap; gap:8px; }
+nav ul li{ padding:10px 0; }
+nav ul li a{
+  text-decoration:none; padding:0.3em 0.5em;
+  display:block; color:#fff;
+  background:rgba(255,255,255,.05);
+  border-radius:6px;
+}
+nav ul li a:hover{ color:#aaa; transform:scale(1.05); }
+
+/* Contenido */
+#contenido{ width:960px; max-width:100%; margin:0 auto; clear:left; padding:16px; }
+
+.plan{
+  width:258px; max-width:100%;
+  padding:20px; background:#fff;
+  margin:16px; border:1px solid #000; border-radius:10px;
+  float:left; text-align:justify;
+}
+.boton{ background:#464d52; padding:7px; border-radius:5px; color:#fff; margin-top:10px; font-size:.9em; text-align:center; cursor:pointer; transition:background 1s; }
+.boton:hover{ background:#5077c7; }
+.boton a{ text-decoration:none; color:#fff; width:100%; display:block; }
+
+/* Footer */
+footer{
+  text-align:center; margin:0; font-size:.9em; line-height:2;
+  clear:both; background:#464d52; color:#fff; width:100%;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  #descripcion, #imgDesc .principal{
+    float:none; width:100%; height:auto;
+  }
+  .plan{ float:none; width:100%; margin:16px 0; }
+}
+
+@media (max-width: 480px){
+  h1{ font-size:1.1em; }
+  .boton{ font-size:.95em; }
+}
+/* planes */
+.planes {
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.planes h1 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.planes img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.planes p {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.planes .precio {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+

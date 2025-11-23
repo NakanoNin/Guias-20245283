@@ -1,0 +1,97 @@
+:root{
+  --bg:#0b1220; --card:#0f172a; --ink:#e6eaf2; --muted:#9aa3b2;
+  --brand:#60a5fa; --brand2:#38bdf8; --border:#1e293b; --ok:#10b981; --warn:#f59e0b;
+}
+*{ box-sizing:border-box }
+html{ font-size:100% }
+body{
+  margin:0; line-height:1.65; color:var(--ink);
+  background: radial-gradient(900px 500px at 50% -10%, rgba(56,189,248,.12), transparent 60%), var(--bg);
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+.container{ width:min(1100px,92%); margin: 20px auto 48px }
+
+/* Header y nav */
+header.site{
+  position:sticky; top:0; z-index:10;
+  background: linear-gradient(180deg, rgba(15,23,42,.9), rgba(15,23,42,.8));
+  border-bottom:1px solid var(--border); backdrop-filter: blur(6px);
+}
+.brand{ margin:0; padding:12px 0; font-weight:800; font-size:clamp(22px,3vw,34px) }
+.main-nav ul{ list-style:none; padding:0 0 14px; margin:0; display:flex; gap:10px; flex-wrap:wrap }
+.main-nav ul>li>a{
+  display:inline-block; padding:8px 12px; border:1px solid var(--border); border-radius:999px;
+  text-decoration:none; color:var(--ink); transition:.15s transform ease;
+}
+.main-nav ul>li>a:hover{ background:#12213c; transform: translateY(-1px) }
+/* atributo (sin tocar HTML): enlaces externos */
+.main-nav a[href^="http"]{ background:#1f2937 }
+.main-nav a[target="_blank"]{ outline:2px dashed var(--brand2) }
+
+/* Tarjetas */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border:1px solid var(--border);
+  border-radius:14px; padding:16px; box-shadow:0 10px 24px rgba(0,0,0,.18);
+  margin-top:18px;
+}
+.section-title{
+  margin:6px 0 12px; font-size:1.35rem; font-weight:800; letter-spacing:.2px; position:relative;
+}
+.section-title::before{
+  content:""; position:absolute; left:0; bottom:-6px; width:64px; height:3px;
+  background:linear-gradient(90deg, var(--brand), var(--brand2)); border-radius:999px;
+}
+
+/* Hero */
+.hero{ display:grid; gap:16px; grid-template-columns: 120px 1fr; align-items:center }
+.avatar{
+  width:120px; height:120px; border-radius:999px; border:2px solid var(--border);
+  display:grid; place-items:center; font-weight:800; font-size:3rem; background:#0e1a31;
+}
+.hero-text .lead{ font-family: "Source Serif 4", serif }
+.btn{
+  display:inline-block; margin-top:10px; padding:10px 14px; border-radius:10px;
+  background:linear-gradient(90deg, var(--brand), var(--brand2)); color:#051023; font-weight:700; text-decoration:none
+}
+.btn:hover{ filter:brightness(1.1) }
+
+/* Artículo y tipografía */
+.article p{ text-align:justify; margin:.5rem 0 }
+.article p::first-letter{ color:#f7c948; font-weight:700; font-size:1.3rem } /* primera letra destacada */
+.article:first-child p::first-line{ text-decoration:underline } /* primera línea subrayada solo en la primera sección .article */
+
+/* Datos */
+.datos{ padding-left:1rem; margin:.4rem 0 0 }
+.datos li{ margin:.2rem 0 }
+.datos li:nth-child(odd){ color:#cdd5e1 } /* alternar color */
+
+/* Gustos */
+.grid-2{ display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)) }
+.mini{ background:#0e1a31; border:1px solid var(--border); border-radius:10px; padding:12px }
+.bullets{ margin:.2rem 0 0; padding-left:1.2rem }
+.nota{ margin-top:.6rem; color:#cbd5e1; font-style:italic }
+
+/* Cronología */
+.timeline{ list-style:none; padding:0; margin:0 }
+.timeline li{
+  background:#0e1a31; border:1px solid var(--border); border-left:4px solid #233559;
+  border-radius:10px; padding:10px 12px; margin:10px 0
+}
+.timeline li:nth-child(odd){ border-left-color: var(--ok) }
+.timeline li:nth-child(even){ border-left-color: var(--warn) }
+
+/* Habilidades (chips) */
+.tags{ list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px }
+.tag{
+  padding:6px 10px; border-radius:999px; font-weight:600; background:#0e1a31; border:1px solid var(--border)
+}
+.tag.html{ color:#ffae52 } .tag.css{ color:#7cc7ff } .tag.js{ color:#ffd166 }
+.tag.py{ color:#a7f3d0 } .tag.java{ color:#fca5a5 } .tag.soft{ color:#cbd5e1 }
+
+/* Footer */
+footer.site{ border-top:1px solid var(--border); margin-top:24px }
+footer.site .container{ color:var(--muted); padding:14px 0 22px }
+
+/* Detalles extra */
+::selection{ background:#1e40af; color:#fff }

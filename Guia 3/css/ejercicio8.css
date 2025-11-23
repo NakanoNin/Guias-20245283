@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Muli', sans-serif;
+  text-align: justify;
+  background: #f7f7f7;
+  color: #222;
+}
+
+header{
+  background: #16A085;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+}
+
+h1{
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+h2{
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+section{
+  margin: 1rem auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section article{
+  font-size: 0.9rem;
+  background: #fff;
+  border: 2px dashed #16A085;
+  width: 32%;
+  margin-bottom: 1rem;
+  padding: 1%;
+  text-align: center;
+}
+
+section article img{
+  height: 180px;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+  display: block;
+  object-fit: cover;
+}
+
+section article h3{
+  margin: 0.5rem 0;
+}
+
+footer{
+  margin-top: 20px;
+  background: #16A085;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Posicionamiento relativo al segundo artículo */
+section article:nth-child(2){
+  background-color: rgba(70,130,180,0.9);
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+
+
+@media (max-width: 768px){
+  section article{
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px){
+  section article{
+    width: 100%;
+  }
+}
